@@ -11,6 +11,7 @@ html {
 
 body {
   overflow-x: hidden;
+  max-width: 100vh;
   margin: 0;
   font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -38,6 +39,11 @@ h1 {
   font-size: 3.8rem;
   line-height: 140%;
   font-weight: 600;
+}
+
+p {
+  font-size: 1.6rem;
+  line-height: 160%;
 }
 
 header {
@@ -154,6 +160,36 @@ header .logo__block--name {
 }
 .btn2:hover {
   cursor: pointer;
+}
+
+.home {
+  max-width: 870px;
+}
+@media (min-width: 768px) {
+  .home {
+    margin: auto;
+  }
+  .home__title {
+    display: flex;
+  }
+  .home p {
+    padding: 0px 16px;
+  }
+}
+@media (max-width: 767px) {
+  .home {
+    margin: 32px;
+  }
+  .home__title--img {
+    width: 100%;
+    margin: 0px;
+  }
+  .home__title--img img {
+    display: block;
+    width: 100%;
+    max-width: 320px;
+    margin: auto;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

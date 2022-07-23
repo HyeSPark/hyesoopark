@@ -13,6 +13,11 @@ h1 {
     font-weight: 600;
  }
 
+p {
+    font-size: 1.6rem;
+    line-height: 160%;
+}
+
 header {
     margin: 16px;
     display: flex;
@@ -126,4 +131,32 @@ header {
         cursor: pointer;
     }
 }
-  
+
+
+.home {
+    
+    max-width: 870px;
+    @include desktop {
+        margin: auto;
+        &__title {
+            display: flex;
+        }
+        p {
+            padding: 0px 16px;
+        }
+    }
+    @include mobile {
+        margin: 32px;
+        &__title--img {
+            width: 100%;
+            margin: 0px;
+            img {
+                display: block;
+                width: 100%;
+                max-width: 320px;
+                margin: auto;
+            }
+        }
+        
+    }
+}
