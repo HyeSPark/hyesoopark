@@ -1,0 +1,30 @@
+html {
+    display: block;
+}
+
+:root{
+    font-size: 10px;
+}
+
+body {
+    overflow-x: hidden;
+    margin: 0;
+    font-family: Pretendard, -apple-system, 
+    BlinkMacSystemFont, system-ui, Roboto, 
+    'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 
+    'Noto Sans KR', 'Malgun Gothic', sans-serif;
+  
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-overflow-scrolling: touch;
+}
+
+ul { 
+    list-style: none;
+    padding-left: 0px;
+}
+
+a {
+    color: $default_color;
+    text-decoration: none;
+}

@@ -4,8 +4,14 @@
   "description": "site",
   "main": "index.js",
   "scripts": {
+    "serve": "wds --watch",
+    "serve:prod": "MODE=prod npm run serve",
+    "start": "web-dev-server --node-resolve --open --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@web/dev-server": "^0.1.32"
+  }
 }

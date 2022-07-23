@@ -1,0 +1,79 @@
+// 색상
+$main_color: #684AE2;
+$default_color: black;
+
+// 반응형 화면 크기
+$mobile: 767px;
+$tablet: 1023px;
+$desktop: 768px;
+
+// 반응형, 브라우저 크기가 767px 이하일때
+@mixin mobile{
+  @media (max-width: $mobile){
+    @content;
+  }
+}
+
+// 반응형, 브라우저 크기가 768이상, 1023px 이하일때
+// @mixin tablet{
+//   @media (min-width: (#{$mobile} + 1)) and (max-width: $tablet){
+//     @content;
+//   }
+// }
+
+/*반응형, 브라우저 크기가 1024px 이상일때*/
+@mixin desktop{
+  @media (min-width: $desktop){
+    @content;
+  }
+}
+
+/*넓이, 높이 자동 계산함수*/
+@mixin square($size){
+  $calculated: 32px * $size;
+  width: $calculated;
+  height: $calculated;
+}
+
+
+$dark: #212121;
+
+
+@mixin btn ($top, $right) {
+    width: 24px;
+    height: 24px;
+    top:$top;
+    right:$right;
+    transition-duration: 0.5s;
+    position: absolute;
+    z-index: 100;
+}
+
+@mixin icon($height, $width) {
+    transition-duration: 0.5s;
+    position: absolute;
+    height: $height;
+    width: $width;
+    top: 30px;
+    background-color: $dark;
+}
+
+@mixin icon-before($height, $width, $top) {
+    transition-duration: 0.5s;
+    position: absolute;
+    width: $width;
+    height: $height;
+    background-color: $dark;
+    content: "";
+    top: $top;
+}
+
+@mixin icon-after($height, $width, $top) {
+    transition-duration: 0.5s;
+    position: absolute;
+    width: $width;
+    height: $height;
+    background-color: $dark;
+    content: "";
+    top: $top;
+}
