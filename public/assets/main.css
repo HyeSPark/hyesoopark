@@ -2,7 +2,8 @@
 /*반응형, 브라우저 크기가 1024px 이상일때*/
 /*넓이, 높이 자동 계산함수*/
 html {
-  display: block;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 :root {
@@ -11,7 +12,7 @@ html {
 
 body {
   overflow-x: hidden;
-  max-width: 100vh;
+  max-width: 100%;
   margin: 0;
   font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -29,28 +30,21 @@ a {
   text-decoration: none;
 }
 
-@media (max-width: 767px) {
-  :root {
-    font-size: 8px;
-  }
-}
-
-h1 {
-  font-size: 3.8rem;
-  line-height: 140%;
-  font-weight: 600;
-}
-
-p {
-  font-size: 1.6rem;
-  line-height: 160%;
-}
-
+/*반응형, 브라우저 크기가 1024px 이상일때*/
+/*넓이, 높이 자동 계산함수*/
+/*반응형, 브라우저 크기가 1024px 이상일때*/
+/*넓이, 높이 자동 계산함수*/
 header {
-  margin: 16px;
+  padding: 0.8rem 1.6rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  transition: 0.5s;
 }
 @media (min-width: 768px) {
   header nav .menu {
@@ -88,17 +82,22 @@ header {
   }
   header .menu_list {
     position: absolute;
-    top: 0vh;
+    margin: 0px;
+    top: 0px;
     left: 0px;
     transition: 0.5s;
     width: 100vw;
     height: 100vh;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
     padding-top: 25vh;
+    overflow-x: hidden;
   }
   header .hide {
     transform: translateX(100vw);
     visibility: hidden;
+    overflow-x: hidden;
   }
 }
 header .logo {
@@ -106,6 +105,7 @@ header .logo {
 }
 header .logo__block {
   display: flex;
+  align-items: center;
 }
 header .logo__block--name {
   font-size: 2.4rem;
@@ -113,10 +113,20 @@ header .logo__block--name {
   padding-left: 12px;
 }
 
+@media (min-width: 768px) {
+  .nav-up {
+    top: -100px; /* same as header height */
+  }
+}
+@media (max-width: 767px) {
+  .nav-up {
+    top: -86px; /* same as header height */
+  }
+}
 .btn2 {
   width: 24px;
   height: 24px;
-  top: 20px;
+  top: 16px;
   right: 32px;
   transition-duration: 0.5s;
   position: absolute;
@@ -128,14 +138,14 @@ header .logo__block--name {
   height: 3px;
   width: 24px;
   top: 30px;
-  background-color: #212121;
+  background-color: black;
 }
 .btn2 .icon:before {
   transition-duration: 0.5s;
   position: absolute;
   width: 24px;
   height: 3px;
-  background-color: #212121;
+  background-color: black;
   content: "";
   top: -10px;
 }
@@ -144,7 +154,7 @@ header .logo__block--name {
   position: absolute;
   width: 24px;
   height: 3px;
-  background-color: #212121;
+  background-color: black;
   content: "";
   top: 10px;
 }
@@ -162,11 +172,29 @@ header .logo__block--name {
   cursor: pointer;
 }
 
+@media (max-width: 767px) {
+  :root {
+    font-size: 8px;
+  }
+}
+
+h1 {
+  font-size: 3.8rem;
+  line-height: 140%;
+  font-weight: 600;
+}
+
+p {
+  font-size: 1.6rem;
+  line-height: 160%;
+}
+
 .home {
   max-width: 870px;
 }
 @media (min-width: 768px) {
   .home {
+    padding-top: 100px;
     margin: auto;
   }
   .home__title {
@@ -178,6 +206,7 @@ header .logo__block--name {
 }
 @media (max-width: 767px) {
   .home {
+    padding-top: 86px;
     margin: 32px;
   }
   .home__title--img {

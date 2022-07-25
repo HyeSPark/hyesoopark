@@ -1,5 +1,7 @@
 html {
-    display: block;
+    // display: block;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 :root{
@@ -8,7 +10,7 @@ html {
 
 body {
     overflow-x: hidden;
-    max-width: 100vh;
+    max-width: 100%;
     margin: 0;
     font-family: Pretendard, -apple-system, 
     BlinkMacSystemFont, system-ui, Roboto, 

@@ -1,0 +1,146 @@
+@import './_ham-btn.scss';
+@import './utils.scss';
+
+
+header {
+    padding: 0.8rem 1.6rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    // backdrop-filter: blur(16px);
+    transition: 0.5s;
+    @include desktop{
+        nav {
+            .menu {
+                display: none;
+            }
+            ul { 
+                display: flex;
+                a {
+                    color: $default_color;
+                    font-size: 1.8rem;
+                    padding: 25px;
+                    font-weight: 600;
+                    &:hover {
+                        color: $main_color;
+                    }
+                    transition: color 0.2s;
+                }
+                .nav__selected {
+                    color: $main_color;
+                }
+            }
+        }
+    }
+
+    @include mobile{
+        nav {
+            
+            li {
+                margin: 16px;
+                a {
+                    color: $default_color;
+                    font-size: 3.0rem;
+                    font-weight: 600;
+                    padding-left: 32px;
+                }
+            }
+            
+            .nav__selected {
+                color: $main_color;
+            }
+        }
+        .menu_list {
+            position: absolute;
+            margin: 0px;
+            top: 0px;
+            left: 0px;
+            transition: 0.5s;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba($color: #ffffff, $alpha: 0.8);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            padding-top: 25vh;
+            overflow-x: hidden;
+        }
+
+        
+        
+        .hide {
+            transform: translateX(100vw);
+            visibility: hidden;
+            overflow-x: hidden;
+            // width: 0px;
+        }
+    }
+
+   
+    .logo {
+        padding: 2.5rem;
+        &__block{
+            display: flex;
+            align-items: center;
+            &--name {
+                font-size: 2.4rem;
+                font-weight: 600;
+                padding-left: 12px;
+            }
+        }
+    }
+
+}
+
+@include desktop {
+    .nav-up {
+        top: -100px; /* same as header height */
+    }
+    
+}
+
+@include mobile {
+    
+    .nav-up {
+        top: -86px; /* same as header height */
+    }
+}
+
+.btn2{
+    @include btn(16px, 32px);
+
+    .icon {
+        @include icon(3px, 24px);
+        
+        &:before{
+            @include icon-before(3px, 24px, -10px);
+        }
+        
+        &:after{
+            @include icon-after(3px, 24px, 10px);
+        }
+    }
+
+    &.open {
+        .icon {
+            transition-duration: 0.5s;
+            background: transparent;
+        
+        &:before{
+            transform: rotateZ(45deg) scaleX(1.25) translate(6.5px, 6.5px);
+        }
+
+        &:after{
+            transform: rotateZ(-45deg) scaleX(1.25) translate(6.5px, -6.5px);
+        }
+        }
+    }
+    &:hover {
+        cursor: pointer;
+    }
+}
