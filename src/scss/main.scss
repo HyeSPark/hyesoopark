@@ -24,11 +24,6 @@ p {
 
 
 .home {
-    //하단 푸터 고정용
-    height: auto;
-    min-height: 100%;
-    padding-bottom: $footer_height;
-    //
     max-width: 870px;
     @include desktop {
         
