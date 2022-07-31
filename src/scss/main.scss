@@ -24,6 +24,11 @@ p {
 
 
 .home {
+    //하단 푸터 고정용
+    height: auto;
+    min-height: 100%;
+    padding-bottom: $footer_height;
+    //
     max-width: 870px;
     @include desktop {
         
@@ -51,5 +56,47 @@ p {
             }
         }
         
+    }
+}
+
+.home__info {
+    
+    @include desktop {
+        padding: 0px 16px;
+        display: flex;
+        flex: 1;
+        justify-content: space-between;
+
+        &--news {
+            flex-grow: 1;
+            flex-basis: 0;
+            margin-right: 20px;
+        }
+        &--proj {
+            flex-grow: 1;
+            flex-basis: 0;
+            margin-left: 20px;
+        }
+    }
+    .infoContents {
+
+        padding: 2rem 0px;
+        border-top: 1px solid #D2D2D2;
+
+        &__date {
+            font-size: 1.8rem;
+            color: #898989;
+            font-weight: 700;
+        }
+        &__title {
+            font-size: 2.8rem;
+            font-weight: 600;
+            margin-top: 1.4rem;
+            margin-bottom: 1rem;
+        }
+        &__text {
+            font-size: 1.4rem;
+            line-height: 160%;
+        }
     }
 }

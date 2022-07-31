@@ -1,5 +1,13 @@
 @import './utils.scss';
 
+.footer__wrapper {
+    // 하단고정용
+    height: $footer_height;
+    position: relative;
+    transform: translateY(-100%);
+    //
+}
+
 footer {
     margin: 4rem;
     @include desktop {
