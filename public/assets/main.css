@@ -172,16 +172,69 @@ header .logo__block--name {
   cursor: pointer;
 }
 
+/*반응형, 브라우저 크기가 1024px 이상일때*/
+/*넓이, 높이 자동 계산함수*/
+footer {
+  margin: 4rem;
+  border-top: 1px solid #BBBDC7;
+}
+@media (min-width: 768px) {
+  footer {
+    padding: 0rem 3rem;
+  }
+}
+footer .footer--name {
+  color: #684AE2;
+}
+@media (min-width: 768px) {
+  footer .footer--content {
+    display: flex;
+    justify-content: space-between;
+  }
+  footer .footer--content__list {
+    width: 400px;
+    margin-right: 40px;
+  }
+}
+footer .footer--content__list {
+  flex-shrink: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+}
+@media (min-width: 768px) {
+  footer .footer--content__list {
+    margin-right: 40px;
+  }
+}
+footer .footer--content__list a {
+  font-size: 2.1rem;
+  font-weight: 700;
+}
+footer .footer--content__copyright {
+  flex-shrink: 0;
+  font-size: 1.4rem;
+  color: gray;
+}
+@media (max-width: 767px) {
+  footer .footer--content__copyright {
+    display: block;
+    margin-top: 36px;
+  }
+}
+
 @media (max-width: 767px) {
   :root {
     font-size: 8px;
   }
 }
 
-h1 {
+.title {
   font-size: 3.8rem;
   line-height: 140%;
   font-weight: 600;
+  margin: 2.5rem 0rem;
 }
 
 p {

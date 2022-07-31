@@ -1,3 +1,7 @@
+import customHeader from './components/customHeader.js'
+
+customElements.define('custom-header', customHeader);
+
 document.querySelector('.menu').onclick = function (e) {
     var menuList = document.querySelector('.menu_list');
     var menu = document.querySelector('.menu');
@@ -5,56 +9,21 @@ document.querySelector('.menu').onclick = function (e) {
     menu.classList.toggle('open');
     
     if (menu.classList.contains('open')) {
-        document.querySelector('body').style.height = String(document.documentElement.clientHeight) + 'px';
+        // document.querySelector('body').style.height = String(document.documentElement.clientHeight) + 'px';
         document.querySelector('body').style.overflowY = "hidden";
+        document.querySelector('html').style.overflowY = "hidden";
+        document.querySelector('body').style.overscrollBehaviorY = 'none';
+
     } else {
-        document.querySelector('body').style.height = '100%';
+        // document.querySelector('body').style.height = '100%';
         document.querySelector('body').style.removeProperty('overflow-y');
+        document.querySelector('html').style.removeProperty('overflow-y');
+        document.querySelector('body').style.removeProperty('overscroll-behavior-y');
+        
     }
     
     e.preventDefault();
-  }
-
-
-class header extends HTMLElement {
-    connectedCallback() {
-        this.innerHTML = `
-            <header>
-            <a class="logo" href="./"> 
-            <div class="logo__block">
-                <img src="./assets/images/logo.png" width="32px"/>
-                <div class="logo__block--name">Hye Soo Park</div>
-            </div>
-            </a>
-    
-            <nav>
-            <div class="menu btn2">
-                <div class="icon"></div>
-            </div>
-            <ul class="menu_list hide">
-                <li>
-                <a href="./" class="nav__selected">Home</a>
-                </li>
-                <li>
-                <a href="./projects">Projects</a>
-                </li>
-                <li>
-                <a href="./publication.html">Publication</a>
-                </li>
-                <li>
-                <a href="./about.html">About</a>
-                </li>
-            </ul>
-            </nav>
-        </header>
-        `
-    }
-
-    static get observedAttributes() {
-        return []
-    }
 }
-customElements.define('custom-header', header);
 
 var didScroll;
 var lastScrollTop = 0;
@@ -87,6 +56,7 @@ function hasScrolled() {
         header.classList.remove('nav-down');
         header.classList.add('nav-up');
         console.log(st)
+        
     } else {
         // Scroll Up
         console.log(st + window.innerHeight)

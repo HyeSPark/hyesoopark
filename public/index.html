@@ -15,50 +15,21 @@
     <script type="module" src="./main.js"></script>
   </head>
   <body>
-    <header class="nav-down">
-      <a class="logo" href="./"> 
-        <div class="logo__block">
-          <img src="./assets/images/logo.png" width="32px"/>
-          <div class="logo__block--name">Hye Soo Park</div>
-        </div>
-      </a>
-
-      <nav>
-        <div class="menu btn2">
-          <div class="icon"></div>
-        </div>
-        <ul class="menu_list hide">
-          <li>
-            <a href="./" class="nav__selected">Home</a>
-          </li>
-          <li>
-            <a href="./projects">Projects</a>
-          </li>
-          <li>
-            <a href="./publication.html">Publication</a>
-          </li>
-          <li>
-            <a href="./about.html">About</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
-    <!-- <custom-header></custom-header> -->
-    <!-- <nav-bar></nav-bar> -->
+    <custom-header name="Home"></custom-header>
     <main class="home">
       <div class="home__title">
         <figure class="home__title--img">
           <img src="./assets/images/main_img.png"/>
         </figure>
-        <h1>
+        <div class="title">
           I’m Hye Soo, <br>
           a HCI researcher <br>
           and a UI/UX designer. <br>
-        </h1>
+        </div>
       </div>
       <p>
-        I’m a master’s student at KAIST School of Computing, 
-        and a member of ICLAB. I’m under the advisement of Prof. 
+        I’m a master’s student at <a href="https://cs.kaist.ac.kr/" target="_blank"><u>KAIST School of Computing</u></a>, 
+        and a member of <a href="http://ic.kaist.ac.kr/wiki/wiki.cgi?Main" target="_blank"><u>ICLAB</u></a>. I’m under the advisement of Prof. 
         Uichin Lee. I aim to understand human behavior changes by 
         computing through the research.
       </p>
@@ -70,7 +41,18 @@
       </p>
     </main>
     
-
+    <footer>
+      <div class="title footer--name">Contact</div>
+      <div class="footer--content">
+        <ul class="footer--content__list">
+          <li><a href="https://www.linkedin.com/in/hye-soo-park-785844242/" target="_blank">LinkedIn</a></li>
+          <li><a href="mailto:hyehye@kiast.ac.kr">Email</a></li>
+          <li><a href="#">Twitter</a></li>
+          <li><a href="./assets/data/CV.pdf" target="_blank">CV</a></li>
+        </ul>
+        <span class="footer--content__copyright">© 2022. Hye Soo Park all rights reserved.</span>
+      </div>
+    </footer>
     <script>
     </script>
   </body>

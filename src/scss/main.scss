@@ -1,6 +1,7 @@
 @import './utils.scss';
 @import './reset.scss';
 @import './_header.scss';
+@import './_footer.scss';
 
 :root {
     @include mobile{ 
@@ -8,10 +9,11 @@
     }
 }
 
-h1 { 
+.title { 
     font-size: 3.8rem;
     line-height: 140%;
     font-weight: 600;
+    margin: 2.5rem 0rem;
  }
 
 p {
