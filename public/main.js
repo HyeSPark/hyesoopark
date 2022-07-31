@@ -1,6 +1,8 @@
 import customHeader from './components/customHeader.js'
+import customFooter from './components/customFooter.js'
 
 customElements.define('custom-header', customHeader);
+customElements.define('custom-footer', customFooter);
 
 document.querySelector('.menu').onclick = function (e) {
     var menuList = document.querySelector('.menu_list');
