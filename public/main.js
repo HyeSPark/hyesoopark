@@ -1,36 +1,58 @@
 import customHeader from './components/customHeader.js'
 import customFooter from './components/customFooter.js'
-import newsContent from './components/newsContent.js'
-import projContent from './components/projContent.js'
 
 customElements.define('custom-header', customHeader);
 customElements.define('custom-footer', customFooter);
-customElements.define('news-content', newsContent);
-customElements.define('proj-content', projContent);
+
+var isMenuOpened = false;
 
 document.querySelector('.menu').onclick = function (e) {
     var menuList = document.querySelector('.menu_list');
     var menu = document.querySelector('.menu');
     menuList.classList.toggle('hide');
     menu.classList.toggle('open');
-    
+    var body = document.querySelector('body')
     if (menu.classList.contains('open')) {
-        // document.querySelector('body').style.height = String(document.documentElement.clientHeight) + 'px';
-        document.querySelector('body').style.overflowY = "hidden";
-        document.querySelector('html').style.overflowY = "hidden";
-        document.querySelector('body').style.overscrollBehaviorY = 'none';
+        var st = document.documentElement.scrollTop;
+        console.log(st)
 
-    } else {
-        // document.querySelector('body').style.height = '100%';
-        document.querySelector('body').style.removeProperty('overflow-y');
-        document.querySelector('html').style.removeProperty('overflow-y');
-        document.querySelector('body').style.removeProperty('overscroll-behavior-y');
+
+        body.style.position = 'fixed';
+        body.style.marginTop = `${-1 * st}px`;
+
+
+        body.style.overflowY = "hidden";
+        document.querySelector('html').style.overflowY = "hidden";
+        body.style.overscrollBehaviorY = 'none';
+        body.style.touchAction = 'pan-x pan-y';
         
+
+
+        isMenuOpened = true;
+    } else {
+        
+        body.style.removeProperty('overflow-y');
+        document.querySelector('html').style.removeProperty('overflow-y');
+        body.style.removeProperty('overscroll-behavior-y');
+        body.style.removeProperty('touch-action');
+
+        body.style.removeProperty('position');
+        var mt = window.getComputedStyle(body).getPropertyValue('margin-top');
+
+        body.style.removeProperty('margin-top');
+        if (mt !== '0px') {
+            window.scrollTo(0, Number(mt.substring(1, mt.length-2)));
+            console.log(Number(mt.substring(1, mt.length-2)))
+        }
+
+        isMenuOpened = false;
     }
     
     e.preventDefault();
 }
 
+
+// header scroll event handler
 var didScroll;
 var lastScrollTop = 0;
 var delta = 5;
@@ -42,7 +64,9 @@ window.onscroll = function(e) {
 
 setInterval(function() {
     if (didScroll) {
-        hasScrolled();
+        if (!isMenuOpened) {
+            hasScrolled();
+        }
         didScroll = false;
     }
 }, 250);
@@ -61,12 +85,9 @@ function hasScrolled() {
         // Scroll Down
         header.classList.remove('nav-down');
         header.classList.add('nav-up');
-        console.log(st)
         
     } else {
         // Scroll Up
-        console.log(st + window.innerHeight)
-        console.log(document.documentElement.scrollHeight)
         if(st + window.innerHeight < document.documentElement.scrollHeight) {
             header.classList.remove('nav-up');
             header.classList.add('nav-down');
