@@ -8,6 +8,7 @@ $footer_height: 130px;
 $mobile: 767px;
 $tablet: 1023px;
 $desktop: 768px;
+$wide: 1920px;
 
 // 반응형, 브라우저 크기가 767px 이하일때
 @mixin mobile{
@@ -26,6 +27,12 @@ $desktop: 768px;
 /*반응형, 브라우저 크기가 1024px 이상일때*/
 @mixin desktop{
   @media (min-width: $desktop){
+    @content;
+  }
+}
+
+@mixin wide{
+  @media (min-width: ($wide + 1)){
     @content;
   }
 }

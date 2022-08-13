@@ -4,8 +4,8 @@ class customHeader extends HTMLElement {
         super();
 
         var dirLogo = './assets/images/logo.png'
-        var arrHref = ['./', './projects', './publication.html', './about.html']
-        var arrMenu = ['Home', 'Projects', 'Publication', 'About']
+        var arrHref = ['./', './projects', './about.html'] //['./', './projects', './publication.html', './about.html']
+        var arrMenu = ['Home', 'Projects', 'About'] //'Home', 'Projects', 'Publication', 'About']
 
         var menuName = this.getAttribute('name');
         
@@ -45,7 +45,7 @@ class customHeader extends HTMLElement {
         const menuList = document.createElement('ul');
         menuList.setAttribute('class', 'menu_list hide');
         
-        for (let i=0; i < 4; i++) {
+        for (let i=0; i < arrMenu.length; i++) {
             let menuListEl = document.createElement('a');
             menuListEl.setAttribute('href', arrHref[i]);
             if (menuName === arrMenu[i]) {
