@@ -11,51 +11,24 @@
     <link rel="icon" href="../assets/icon/favicon.ico">
     <link rel="stylesheet" href="../assets/main.css">
     <script type="module" src="../main.js"></script>
+    <script type="module" src="../project.js"></script>
   </head>
   <body>
     <custom-header name="Projects"></custom-header>
     <main class="projects">
-      <div class="pj-wrapper">
-        <section class="pj">
-          <div class="pj__title">
-            <div class="pj__title--name"><span class="icon">🚶‍♀️</span> Mobility Rights</div>
-            <div class="pj__title--tag">Mobile web app</div>
-          </div>
-          <div class="pj__desc">
-            <div class="pj__desc--text">Mobile web app that informs how accessible KAIST campus is</div>
-            <a class="pj__desc--more" href="">View Project &nbsp;
-              <svg width="41" height="29" viewBox="0 0 41 29" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M1 14.5H40M40 14.5L26.5 1M40 14.5L26.5 28" stroke="#F39B16" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </a>
-          </div>
-        </section>
-        <section class="pj">
-          <img src="../assets/images/pj_mobility.jpg" width="100%"/>
-        </section>
-      </div>
-
-      <div class="pj-wrapper">
-        <section class="pj">
-          <div class="pj__title">
-            <div class="pj__title--name"><span class="icon">🚶‍♀️</span> Mobility Rights</div>
-            <div class="pj__title--tag">Mobile web app</div>
-          </div>
-          <div class="pj__desc">
-            <div class="pj__desc--text">Mobile web app that informs how accessible KAIST campus is</div>
-            <a class="pj__desc--more" href="">View Project &nbsp;
-              <svg width="41" height="29" viewBox="0 0 41 29" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M1 14.5H40M40 14.5L26.5 1M40 14.5L26.5 28" stroke="#F39B16" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </a>
-          </div>
-        </section>
-        <section class="pj">
-          <img src="../assets/images/pj_mobility.jpg" width="100%"/>
-        </section>
-      </div>
       
-      
+      <project-view title=" Mobility Rights" tag="MOBILE WEB APP" color="#F39B16" img-src="../assets/images/pj_mobility.jpg">
+        Mobile web app that informs how accessible KAIST campus is
+      </project-view>
+      <project-view title="Mowa" tag="APP DESIGN" color="#9589BB" img-src="../assets/images/pj_mowa.jpg">
+        A weather app sharing users’ weather moments
+      </project-view>
+      <project-view title="PlinDoor" tag="PRODUCT DESIGN" color="#6CC1DC" img-src="../assets/images/pj_plindoor.jpg">
+        A selectively opened and expressive room door
+      </project-view>
+      <project-view title="Voura" tag="DATA VISUALIZATIOn" color="#F1C5EF" img-src="../assets/images/pj_voura.jpg">
+        Projective voice visualizer that can convert the voice into aura
+      </project-view>
       
     </main>
     <custom-footer name="true"></custom-footer>
