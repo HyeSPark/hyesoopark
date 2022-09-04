@@ -61,6 +61,7 @@ p {
 .home__info {
     .info__title {
         margin-top: 40px;
+        color: #CDC7F5;
     }
     @include desktop {
         padding: 0px 16px;
@@ -210,5 +211,114 @@ p {
     }
     @include mobile {
         padding: 48px 32px 0px 32px;
+    }
+}
+
+
+.about {
+    @include wide {
+        max-width: 1500px;
+        display: flex;
+        padding-top: 100px;
+        margin: auto;
+        justify-content: space-between;
+    }
+    @include desktop {
+        width: 90vw;
+        max-width: 1500px;
+        padding-top: 100px;
+        margin: auto;
+        display: flex;
+
+        justify-content: space-between;
+    }
+    @include mobile {
+        padding-top: 86px;
+        margin: 32px;
+        
+    }
+
+    &__profile {
+        margin-right: 1.5rem;
+        &--greetings {
+            @include desktop {
+                display: flex;
+                align-items: center;
+            }
+            @include wide {
+                display: flex;
+                align-items: center;
+            }
+            
+
+            img {
+                height: auto;
+                width: 150px;
+                flex-shrink: 0;
+                border-radius: 50%;
+                border: 1px solid #D2D2D2;
+                display: block;
+
+                margin-right: 1.6rem;
+            }
+            
+            h1 {
+                font-size: 3.0rem;
+                line-height: 140%;
+                font-weight: 600;
+            }
+        }
+        &--links {
+            margin-top: 2rem;
+            @include desktop {
+                display: flex;
+                flex-wrap: wrap;
+            }
+            @include wide {
+                display: flex;
+                flex-wrap: wrap;
+            }
+            &--link {
+                display: inline-block;
+                @include desktop {
+                    display: flex;
+                }
+                @include wide {
+                    display: flex;
+                }
+                margin-right: 1.2rem;
+                margin-bottom: 1.6rem;
+                img {
+                    width: 2.3rem;
+                    height: auto;
+                    margin-right: 1rem;
+                }
+                font-size: 2.0rem;
+                font-weight: 600;
+                border: 1px solid #D2D2D2;
+                padding: 0.8rem 2rem;
+                border-radius: 3rem;
+            }
+        }
+    }
+
+    &__skill {
+    
+        h2 {
+            @include mobile {
+                border-top: 1px solid #d2d2d2;
+                padding-top: 2rem;
+            }
+            font-size: 2.4rem;
+        }
+        h3 {
+            font-size: 1.8rem;
+            margin-bottom: 0.8rem;
+        }
+        li {
+            font-size: 1.6rem;
+            line-height: 150%;
+            margin-bottom: 0.8rem;
+        }
     }
 }

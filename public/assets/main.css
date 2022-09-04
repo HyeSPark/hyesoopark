@@ -293,6 +293,7 @@ p {
 
 .home__info .info__title {
   margin-top: 40px;
+  color: #CDC7F5;
 }
 @media (min-width: 768px) {
   .home__info {
@@ -452,6 +453,119 @@ p {
   .pj-title-container {
     padding: 48px 32px 0px 32px;
   }
+}
+
+@media (min-width: 1921px) {
+  .about {
+    max-width: 1500px;
+    display: flex;
+    padding-top: 100px;
+    margin: auto;
+    justify-content: space-between;
+  }
+}
+@media (min-width: 768px) {
+  .about {
+    width: 90vw;
+    max-width: 1500px;
+    padding-top: 100px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+@media (max-width: 767px) {
+  .about {
+    padding-top: 86px;
+    margin: 32px;
+  }
+}
+.about__profile {
+  margin-right: 1.5rem;
+}
+@media (min-width: 768px) {
+  .about__profile--greetings {
+    display: flex;
+    align-items: center;
+  }
+}
+@media (min-width: 1921px) {
+  .about__profile--greetings {
+    display: flex;
+    align-items: center;
+  }
+}
+.about__profile--greetings img {
+  height: auto;
+  width: 150px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  border: 1px solid #D2D2D2;
+  display: block;
+  margin-right: 1.6rem;
+}
+.about__profile--greetings h1 {
+  font-size: 3rem;
+  line-height: 140%;
+  font-weight: 600;
+}
+.about__profile--links {
+  margin-top: 2rem;
+}
+@media (min-width: 768px) {
+  .about__profile--links {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+@media (min-width: 1921px) {
+  .about__profile--links {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+.about__profile--links--link {
+  display: inline-block;
+  margin-right: 1.2rem;
+  margin-bottom: 1.6rem;
+  font-size: 2rem;
+  font-weight: 600;
+  border: 1px solid #D2D2D2;
+  padding: 0.8rem 2rem;
+  border-radius: 3rem;
+}
+@media (min-width: 768px) {
+  .about__profile--links--link {
+    display: flex;
+  }
+}
+@media (min-width: 1921px) {
+  .about__profile--links--link {
+    display: flex;
+  }
+}
+.about__profile--links--link img {
+  width: 2.3rem;
+  height: auto;
+  margin-right: 1rem;
+}
+.about__skill h2 {
+  font-size: 2.4rem;
+}
+@media (max-width: 767px) {
+  .about__skill h2 {
+    border-top: 1px solid #d2d2d2;
+    padding-top: 2rem;
+  }
+}
+.about__skill h3 {
+  font-size: 1.8rem;
+  margin-bottom: 0.8rem;
+}
+.about__skill li {
+  font-size: 1.6rem;
+  line-height: 150%;
+  margin-bottom: 0.8rem;
 }
 
 /*# sourceMappingURL=main.css.map */
