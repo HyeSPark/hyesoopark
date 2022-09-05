@@ -303,12 +303,14 @@ p {
     }
 
     &__skill {
-    
-        h2 {
+        article {
             @include mobile {
                 border-top: 1px solid #d2d2d2;
                 padding-top: 2rem;
             }
+            margin-bottom: 4rem;
+        }
+        h2 {
             font-size: 2.4rem;
         }
         h3 {
@@ -316,9 +318,20 @@ p {
             margin-bottom: 0.8rem;
         }
         li {
+            
             font-size: 1.6rem;
+            @include mobile {
+                font-size: 1.8rem;
+            }
             line-height: 150%;
             margin-bottom: 0.8rem;
+            span {
+                background-color: #e9e9e9;
+                padding: 3px 8px;
+                border-radius: 12px;
+                font-weight: 500;
+            }
         }
+        
     }
 }

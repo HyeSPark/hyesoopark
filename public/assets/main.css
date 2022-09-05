@@ -549,14 +549,17 @@ p {
   height: auto;
   margin-right: 1rem;
 }
-.about__skill h2 {
-  font-size: 2.4rem;
+.about__skill article {
+  margin-bottom: 4rem;
 }
 @media (max-width: 767px) {
-  .about__skill h2 {
+  .about__skill article {
     border-top: 1px solid #d2d2d2;
     padding-top: 2rem;
   }
+}
+.about__skill h2 {
+  font-size: 2.4rem;
 }
 .about__skill h3 {
   font-size: 1.8rem;
@@ -566,6 +569,17 @@ p {
   font-size: 1.6rem;
   line-height: 150%;
   margin-bottom: 0.8rem;
+}
+@media (max-width: 767px) {
+  .about__skill li {
+    font-size: 1.8rem;
+  }
+}
+.about__skill li span {
+  background-color: #e9e9e9;
+  padding: 3px 8px;
+  border-radius: 12px;
+  font-weight: 500;
 }
 
 /*# sourceMappingURL=main.css.map */
