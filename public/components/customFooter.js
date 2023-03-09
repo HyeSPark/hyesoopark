@@ -24,8 +24,14 @@ class customFooter extends HTMLElement {
             <li><a href="https://www.linkedin.com/in/hye-soo-park-785844242/" target="_blank">LinkedIn</a></li>
             <li><a href="mailto:hyehye@kiast.ac.kr">Email</a></li>
             <li><a href="https://twitter.com/HyeSPark07?s=20&t=HhxT7YxGlyINJPoDcDRSbw">Twitter</a></li>
-            <li><a href=${href} target="_blank">CV</a></li>
         `
+
+        var innerHTMLwithCV = `
+        <li><a href="https://www.linkedin.com/in/hye-soo-park-785844242/" target="_blank">LinkedIn</a></li>
+        <li><a href="mailto:hyehye@kiast.ac.kr">Email</a></li>
+        <li><a href="https://twitter.com/HyeSPark07?s=20&t=HhxT7YxGlyINJPoDcDRSbw">Twitter</a></li>
+        <li><a href=${href} target="_blank">CV</a></li>
+    `
 
         const contentCR = document.createElement('span');
         contentCR.setAttribute('class', 'footer--content__copyright')

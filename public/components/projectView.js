@@ -21,11 +21,8 @@ class projectView extends HTMLElement {
             </div>
             <div class="pj__desc">
                 <div class="pj__desc--text">${text}</div>
-                <a class="pj__desc--more" href="${link}">View Project &nbsp;
-                    <svg width="41" height="29" viewBox="0 0 41 29" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M1 14.5H40M40 14.5L26.5 1M40 14.5L26.5 28" stroke="${color}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </a>
+
+                
             </div>
             </section>
             <section class="pj">
@@ -33,6 +30,12 @@ class projectView extends HTMLElement {
             </section>
         </div>
         `
+
+        var goToProject = `<a class="pj__desc--more" href="${link}">View Project &nbsp;
+        <svg width="41" height="29" viewBox="0 0 41 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 14.5H40M40 14.5L26.5 1M40 14.5L26.5 28" stroke="${color}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    </a>`
         
     }
 }
