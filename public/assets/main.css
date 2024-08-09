@@ -254,6 +254,10 @@ p {
   line-height: 160%;
 }
 
+a.link {
+  text-decoration: underline;
+}
+
 .home {
   max-width: 870px;
 }
@@ -314,22 +318,24 @@ p {
   }
 }
 .home__info .infoContents {
-  padding: 2rem 0px;
+  padding: 0.8rem 0px;
   border-top: 1px solid #D2D2D2;
+  display: flex;
 }
 .home__info .infoContents__date {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   color: #898989;
   font-weight: 700;
+  width: 100px;
+  flex-shrink: 0;
 }
 .home__info .infoContents__title {
-  font-size: 2.8rem;
-  font-weight: 600;
-  margin-top: 1.4rem;
-  margin-bottom: 0.8rem;
+  font-size: 1.6rem;
+  font-weight: 400;
+  margin: 0;
 }
 .home__info .infoContents__text {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   line-height: 160%;
 }
 @media (max-width: 767px) {

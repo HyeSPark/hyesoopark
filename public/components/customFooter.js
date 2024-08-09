@@ -13,7 +13,7 @@ class customFooter extends HTMLElement {
         wrapper.innerHTML = `
             <div class="title footer--name">Contact</div>
         `
-
+  
         const content = document.createElement('div');
         content.setAttribute('class', 'footer--content');
 
@@ -22,13 +22,13 @@ class customFooter extends HTMLElement {
 
         contentList.innerHTML = `
             <li><a href="https://www.linkedin.com/in/hye-soo-park-785844242/" target="_blank">LinkedIn</a></li>
-            <li><a href="mailto:hyehye@kiast.ac.kr">Email</a></li>
+            <li><a href="mailto:hyehye@kaist.ac.kr">Email</a></li>
             <li><a href="https://twitter.com/HyeSPark07?s=20&t=HhxT7YxGlyINJPoDcDRSbw">Twitter</a></li>
         `
 
         var innerHTMLwithCV = `
         <li><a href="https://www.linkedin.com/in/hye-soo-park-785844242/" target="_blank">LinkedIn</a></li>
-        <li><a href="mailto:hyehye@kiast.ac.kr">Email</a></li>
+        <li><a href="mailto:hyehye@kaist.ac.kr">Email</a></li>
         <li><a href="https://twitter.com/HyeSPark07?s=20&t=HhxT7YxGlyINJPoDcDRSbw">Twitter</a></li>
         <li><a href=${href} target="_blank">CV</a></li>
     `
