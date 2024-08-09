@@ -4,8 +4,8 @@ class customHeader extends HTMLElement {
         super();
 
         var dirLogo = './assets/images/logo.png'
-        var arrHref = ['./', './projects', './about.html'] //['./', './projects', './publication.html', './about.html']
-        var arrMenu = ['Home', 'Projects', 'About'] //'Home', 'Projects', 'Publication', 'About']
+        var arrHref = ['./', './projects', './publications.html', './about.html'] //['./', './projects', './publication.html', './about.html']
+        var arrMenu = ['Home', 'Projects', 'Publications', 'About'] //'Home', 'Projects', 'Publication', 'About']
 
         var menuName = this.getAttribute('name');
         
