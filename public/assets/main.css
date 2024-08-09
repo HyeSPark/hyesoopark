@@ -236,6 +236,9 @@ footer .footer--content__copyright {
   }
 }
 
+:root {
+  font-size: 10px;
+}
 @media (max-width: 767px) {
   :root {
     font-size: 8px;
@@ -406,13 +409,20 @@ hr.line {
 .publications__links {
   display: flex;
   gap: 0.4rem;
-  padding: 0.4rem 0rem;
+  padding: 1.2rem 0rem;
 }
 .publications__links--button {
   font-size: 1.4rem;
   padding: 0.4rem 0.8rem;
   border-radius: 4px;
   background-color: #eeeeee;
+  font-weight: 600;
+  color: #494949;
+}
+@media (max-width: 767px) {
+  .publications__links--button {
+    font-size: 1.6rem;
+  }
 }
 .publications__links--button:hover {
   background-color: #684AE2;
