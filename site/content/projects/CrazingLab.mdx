@@ -1,0 +1,46 @@
+---
+title: Co-Op Crazing Lab. 인턴십
+description: ROS 기반 로봇 시뮬레이션 개발 및 딥러닝 모델 추론 파이프라인 최적화
+organization: Crazing Lab.
+from: "2020-03"
+to: "2023-08"
+---
+
+### 기술 스택
+
+-   ROS
+-   C++
+-   CUDA
+
+### 요약
+
+오픈소스 로봇 운영체제인 [ROS](https://www.ros.org/)를 기반으로, 시뮬레이션([Gazebo](https://gazebosim.org/home))상에서의 로봇의 핵심 기능 개발 및 이를 위한 딥러닝 모델 서빙 파이프라인을 설계 및 최적화했다.
+시뮬레이션 상에서 개발을 한 이유는 실제 로봇이 하드웨어로 개발이 완료 되지 않은 시점이었기 때문이다.
+
+### 시뮬레이션 개발
+
+아래와 같은 파이프라인을 설계하고 개발했다. 사용한 핵심 데이터는 360도 Fisheye camera image, 3D Lidar point cloud, 로봇의 위치 및 Orientation 정보이다.
+
+-   360도 이미지를 기반으로 Human detection 진행
+-   3D lidar 데이터와 위 Detection 결과, 그리고 SLAM을 통해서 얻은 Robot의 현재 위치를 이용해 각 사람의 Global 좌표를 계산한다.
+-   이후 Kalman filter를 이용해서 각 사람의 Point cloud 를 tracking 한다.
+
+### 딥러닝 모델 추론 효율 개선
+
+높은 성능의 하드웨어에서 위 파이프라인이 돌아가는 것이 아니라, 로봇에 임베딩 되어있는 성능에 제한이 있는 Processor에서 돌아가기 때문에,
+딥러닝 추론 과정의 성능 개선이 필수적이었다. 이를 최적화하기 위해 아래와 같은 방법을 사용했다.
+
+-   Preprocess 알고리즘 개선
+-   Producer-Consumer 구조로 Data flow 파이프라인 개선
+-   CUDA기반 Image preprocessing(Resize, Normalize) 가속
+    -   GPU의 하드웨어 스펙에 맞게 grid, block size 설정
+-   CUDA 벤치마킹 툴인 [Nsight](https://developer.nvidia.com/nsight-systems)를 이용해 벤치마킹을 진행하고, CPU/GPU간 Memory migration을 최소화
+-   서로 의존적이지 않은 Kernel을 Stream을 통해서 동시에 계산
+
+### 기타
+
+-   보다 구체적으로 적고 싶으나, 비공개 프로젝트이기 때문에 상세한 내용을 적기에는 어려움이 있다.
+
+### 데모 사진
+
+-   <Image src="/CrazingLab_01.png" alt="demo" width={600} height={600} />
