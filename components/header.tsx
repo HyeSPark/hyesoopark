@@ -93,11 +93,11 @@ const Header: React.FC = () => {
                     <div className="icon"></div>
                 </div>
                 <ul
-                    className={`menu_list ${
-                        isMenuOpen
-                            ? "fixed top-0 left-0 w-full h-full bg-white bg-opacity-80 backdrop-blur-lg pt-40 transition-transform duration-500"
-                            : "fixed transform translate-x-full visibility-hidden"
-                    } md:flex md:relative md:bg-transparent md:w-auto md:h-auto md:backdrop-blur-none md:pt-0 md:transform-none md:transition-none md:ml-8`}
+                    className={`menu_list 
+                      fixed top-0 left-0 w-full h-full bg-white bg-opacity-80 backdrop-blur-lg pt-40 md:flex md:relative md:bg-transparent md:w-auto md:h-auto md:backdrop-blur-none md:pt-0 md:transform-none md:transition-none md:ml-8
+                      transition-transform duration-500 ${
+                          isMenuOpen ? "translate-x-0" : "translate-x-full"
+                      }`}
                 >
                     {arrMenu.map((menu, index) => (
                         <li key={index} className="m-8 md:mr-6">
