@@ -54,7 +54,7 @@ export default function Home() {
     )
 
     return (
-        <div className="!max-w-full prose dark:prose-invert p-4">
+        <div className="!max-w-full prose dark:prose-invert">
             <h2>Conference & Journal Papers</h2>
             {fullPubs.map(renderPubList)}
             <hr></hr>

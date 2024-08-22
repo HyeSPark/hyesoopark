@@ -42,7 +42,7 @@ export default function Home() {
   )
 
   return (
-    <div className="!max-w-full prose dark:prose-invert divide-y px-8">
+    <div className="!max-w-full prose dark:prose-invert divide-y">
       {renderIntro()}
       {posts.map((post) => (
         <article key={post._id} className="py-2 flex">

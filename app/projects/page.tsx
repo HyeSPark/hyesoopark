@@ -14,7 +14,7 @@ export default function Home() {
     const projects = allProjects.sort((a, b) => (a.from > b.from ? -1 : 1));
 
     return (
-        <div className="px-4 prose dark:prose-invert">
+        <div className="prose dark:prose-invert">
             {allProjects.map((project) => (
                 <article key={project._id}>
                     <div className="flex items-center justify-between w-full">

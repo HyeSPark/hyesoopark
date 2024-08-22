@@ -89,7 +89,7 @@ const Header: React.FC = () => {
               <li key={index} className="m-8 md:mr-6">
                 <a
                   href={arrHref[index]}
-                  className="text-default_color text-xl md:text-lg font-semibold md:py-6 py-4 transition-colors duration-200 md:hover:text-main_color"
+                  className="text-default_color text-2xl md:text-xl md:text-lg font-semibold md:py-6 py-4 transition-colors duration-200 md:hover:text-main_color"
                 >
                   {menu}
                 </a>
