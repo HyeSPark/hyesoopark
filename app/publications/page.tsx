@@ -44,9 +44,9 @@ export default function Home() {
                         
                     </div>
                     <div className="flex gap-2 py-1">
-                        {pub.pdfLink && renderLinkButton(pub.pdfLink, "PDF", <Pdf width={20} height={20}/>)}
-                        {pub.doiLink && renderLinkButton(pub.doiLink, "DOI", <LinkIcon width={20} height={20}/>)}
-                        {pub.vidLink && renderLinkButton(pub.vidLink, "VIDEO", <Video width={20} height={20}/>)}
+                        {pub.pdfLink && renderLinkButton(pub.pdfLink, "PDF", <Pdf width={16} height={16}/>)}
+                        {pub.doiLink && renderLinkButton(pub.doiLink, "DOI", <LinkIcon width={16} height={16}/>)}
+                        {pub.vidLink && renderLinkButton(pub.vidLink, "VIDEO", <Video width={16} height={16}/>)}
                     </div>
                 </div>
             </div>
