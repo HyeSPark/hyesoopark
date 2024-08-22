@@ -33,7 +33,7 @@ export default function Home() {
                 <div className="flex flex-col gap-1">
                     <h3>{pub.title}</h3>
                     <div>
-                        {pub.authors.map((auth, i) => (<span className={`font-semibold ${
+                        {pub.authors.map((auth, i) => (<span key={i} className={`font-semibold ${
                             auth === "Hye Soo Park" ? "text-main_color" : ""
                         }`}>{auth}{i === pub.authors.length - 1 ? null : ", "}
                         </span>))}
