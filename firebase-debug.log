@@ -1,0 +1,25 @@
+[debug] [2024-08-22T07:29:36.147Z] ----------------------------------------------------------------------
+[debug] [2024-08-22T07:29:36.148Z] Command:       /usr/local/bin/node /usr/local/bin/firebase deploy
+[debug] [2024-08-22T07:29:36.149Z] CLI Version:   11.27.0
+[debug] [2024-08-22T07:29:36.149Z] Platform:      darwin
+[debug] [2024-08-22T07:29:36.149Z] Node Version:  v20.9.0
+[debug] [2024-08-22T07:29:36.149Z] Time:          Thu Aug 22 2024 16:29:36 GMT+0900 (Korean Standard Time)
+[debug] [2024-08-22T07:29:36.149Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-08-22T07:29:36.185Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-08-22T07:29:36.185Z] > authorizing via signed-in user (9907phs@gmail.com)
+[debug] [2024-08-22T07:29:36.186Z] [iam] checking project hyesoopark for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2024-08-22T07:29:36.186Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/hyesoopark:testIamPermissions [none]
+[debug] [2024-08-22T07:29:36.186Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/hyesoopark:testIamPermissions x-goog-quota-user=projects/hyesoopark
+[debug] [2024-08-22T07:29:36.187Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/hyesoopark:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-08-22T07:29:36.974Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/hyesoopark:testIamPermissions 200
+[debug] [2024-08-22T07:29:36.974Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/hyesoopark:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-08-22T07:29:36.974Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/hyesoopark [none]
+[debug] [2024-08-22T07:29:37.361Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/hyesoopark 200
+[debug] [2024-08-22T07:29:37.361Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/hyesoopark {"projectId":"hyesoopark","projectNumber":"603287180587","displayName":"hyesoopark","name":"projects/hyesoopark","resources":{"hostingSite":"hyesoopark"},"state":"ACTIVE","etag":"1_b74e3733-63cc-4fd2-a0e9-7cd339a5d9db"}
+[debug] [2024-08-22T07:30:04.660Z] TypeError: Cannot read properties of null (reading 'endsWith')
+    at ɵcodegenPublicDirectory (/usr/local/lib/node_modules/firebase-tools/lib/frameworks/next/index.js:206:56)
+    at prepareFrameworks (/usr/local/lib/node_modules/firebase-tools/lib/frameworks/index.js:287:13)
+    at deploy (/usr/local/lib/node_modules/firebase-tools/lib/deploy/index.js:53:13)
+[error] 
+[error] Error: An unexpected error has occurred.

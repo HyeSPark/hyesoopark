@@ -1,0 +1,122 @@
+---
+title: Voura
+description: Projective voice visualizer
+organization: Design
+from: "2022-06"
+to: "2022-06"
+---
+
+## 📝 About the Project
+
+![Voura Prototype Hye Soo Park KAIST Group 7.jpg](/img/proj_voura_1.jpg)
+
+> **Design project** from **HACKAIST**
+> 
+
+🔗 [HACKAIST — Design hackathon of KAIST & Imperial College London](https://hackaist.com)
+
+Topic: **Synaesthesia**
+
+I aimed to make **projective voice visualizer** that can be applied as identifier of person from the inspiration of “personality to color” translative property of the synaesthesia. 
+
+- `p5.js`, `p5.sound`
+
+<aside>
+👑 *Won the 1st prize of Hackathon!* 🎉
+
+</aside>
+
+## 🎥 Video
+<div className="max-w-full">
+    <iframe 
+        width="560" 
+        height="315" 
+        src="https://www.youtube.com/embed/zYhQNlFnxqA?si=HKKAXRYZAfH-sqH-" 
+        title="YouTube video player" 
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
+        encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+    </iframe>
+</div>
+
+**Inspiration** of this project and possible application in real context has been demonstrated in this video.
+
+<iframe width="560" height="315" 
+    src="https://www.youtube.com/embed/FSFesYTjijU?si=XADkfNXPoYrMTdHP" 
+    title="YouTube video player" frameborder="0" allow="accelerometer; 
+    autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+</iframe>
+
+**Demo video of implemented VOURA**. 
+
+When the user talks, this projective VOURA changes its color. After initialization time, it fixed with certain color and size.
+
+## 💬 How it works
+
+After high-pass filtering of voice, I analyzed it with FFT. Several data from the result is used in conversion from voice to aura.
+<table>
+  <thead>
+    <tr>
+      <th>Voice</th>
+      <th>Aura</th>
+      <th>Conversion</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Tone</td>
+      <td>Hue of color</td>
+      <td>higher centroid → colder color</td>
+    </tr>
+    <tr>
+      <td>Pitch</td>
+      <td>Saturation of color</td>
+      <td>lower <em>maxFreq</em> → more saturated color</td>
+    </tr>
+    <tr>
+      <td>Intonation</td>
+      <td>Range of size</td>
+      <td>larger range of <em>maxFreq</em> → larger range of size</td>
+    </tr>
+    <tr>
+      <td>Volume</td>
+      <td>Evg. size</td>
+      <td>larger average of <em>maxFreq</em> → larger size</td>
+    </tr>
+  </tbody>
+</table>
+
+- centroid = center of mass of FFT result
+- *maxFreq* = the frequency level that has maximum volume in FFT result
+
+![Untitled](/img/proj_voura_2.png)
+
+This developed animation is projected on the user’s face with projector.
+
+## 👩🏻‍💻 Developing Process
+
+6/20 - 21
+
+- Introduction of HACKAIST
+- Ideation
+
+6/22 - 23
+
+- Concept decision
+- Development with p5.js and projector
+- Testing different people to iterate details
+
+6/24
+
+- Video filming and making
+- Presentation slides
+
+## ✍️ What I learn
+
+🏃‍♀️**First experience of design sprint**
+
+I had to follow whole process of design from brainstorming to implementation for 5 days. I learnt that it is most **important to select a suitable project concept scale with the time limit.**
+
+✨ **Finding values** 
+
+This project did not begin from the problem definition as usual design projects. The process of finding values of it and match the application context was worth it.
