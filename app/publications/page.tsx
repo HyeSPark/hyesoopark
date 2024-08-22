@@ -34,7 +34,7 @@ export default function Home() {
                     <h3>{pub.title}</h3>
                     <div>
                         {pub.authors.map((auth, i) => (<span key={i} className={`font-semibold ${
-                            auth === "Hye Soo Park" ? "text-main_color" : ""
+                            auth === "Hye Soo Park" ? "text-main_color dark:text-main_color_dark" : ""
                         }`}>{auth}{i === pub.authors.length - 1 ? null : ", "}
                         </span>))}
                     </div>

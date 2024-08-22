@@ -10,6 +10,7 @@ module.exports = {
     extend: {
       colors: {
         main_color: '#684AE2', // Replace with your desired color
+        main_color_dark: '#BCACFF', // Replace with your desired color
         default_color: 'black', // Replace with your desired color
       },
     },

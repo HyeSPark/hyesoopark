@@ -50,7 +50,7 @@ export default function Home() {
             <div className="text-[#898989] font-bold shrink-0 w-24">{formatDate(post.date)}</div>
             <div>
               {post.title}
-              {post.link && <Link href={post.link} className="px-1 text-main_color" target="_blank">Link</Link>}
+              {post.link && <Link href={post.link} className="px-1 text-main_color dark:text-main_color_dark" target="_blank">Link</Link>}
             </div>
           {/* </Link> */}
         </article>
