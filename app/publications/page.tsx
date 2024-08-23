@@ -16,7 +16,8 @@ export default function Home() {
             target="_blank" 
             className="text-sm py-1 px-2 rounded-sm bg-[#eeeeee] 
             font-semibold text-[#494949] hover:bg-main_color hover:text-white 
-            transition duration-200 no-underline flex gap-1 items-center">
+            transition duration-200 no-underline flex gap-1 items-center
+            dark:bg-[#4d4d4d] dark:text-white dark:hover:text-[#494949] dark:hover:bg-main_color_dark">
                 {icon}
                 {title}
             </Link>
@@ -27,7 +28,7 @@ export default function Home() {
         <article key={pub._id}>
             <div className="flex flex-col md:flex-row md:gap-8 items-center justify-between w-full">
                 <img 
-                    className="w-full md:max-w-[250px] m-0 p-0.5 rounded-md border h-full object-cover mt-8"
+                    className="w-full md:max-w-[250px] m-0 p-0.5 rounded-md border h-full object-cover mt-8 bg-white"
                     src={pub.img}
                 ></img>
                 <div className="flex flex-col gap-1">
