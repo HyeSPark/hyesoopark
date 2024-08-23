@@ -15,7 +15,7 @@ export default async function AboutPage() {
         />
         <div className="flex flex-wrap gap-3 text-lg">
             <a target="_blank" className="flex rounded-full px-4 py-2 border gap-2 items-center" href="https://github.com/HyeSPark">
-                <GoogleScholar /> <span>HyeSPark</span>
+                <Github /> <span>HyeSPark</span>
             </a>
 
             <a target="_blank" className="flex rounded-full px-4 py-2 border gap-2 items-center" href="https://www.behance.net/hayespark">
@@ -23,7 +23,7 @@ export default async function AboutPage() {
             </a>
 
             <a target="_blank" className="flex rounded-full px-4 py-2 border gap-2 items-center" href="https://scholar.google.com/citations?user=RI56iIAAAAAJ&hl=ko">
-                <Github /> <span>Publications</span>
+                <GoogleScholar /> <span>Publications</span>
             </a>
         </div>
         <h2>Education</h2>
