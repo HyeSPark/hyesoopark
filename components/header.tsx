@@ -7,6 +7,7 @@ import React, {
     Dispatch,
     useEffect,
 } from "react";
+import MenuButton from "./menuButton";
 
 export const menuNameContext = createContext<{
     menuName: string;
@@ -17,7 +18,7 @@ export const menuNameContext = createContext<{
 });
 
 const Header: React.FC = () => {
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [isMenuOpen, setMenuOpen] = useState(false);
     const [lastScrollTop, setLastScrollTop] = useState(0);
     const [isNavUp, setNavUp] = useState(false);
 
@@ -71,7 +72,11 @@ const Header: React.FC = () => {
 
     return (
         <header
-            className={`fixed md:sticky top-0 left-0 z-40 right-0 bg-white p-4 md:px-8 md:py-3 flex justify-between items-center transition duration-300 ${
+            className={`top-0 left-0 right-0 flex justify-between items-center transition duration-300 z-40
+              md:sticky md:px-8 md:py-3 
+              fixed p-4 
+              bg-white dark:bg-black
+              ${
                 isNavUp ? "-translate-y-full" : ""
             }`}
         >
@@ -84,17 +89,13 @@ const Header: React.FC = () => {
                 </div>
             </a>
             <nav>
-                <div
-                    className={`menu btn2 md:hidden ${
-                        isMenuOpen ? "open" : ""
-                    }`}
-                    onClick={() => setIsMenuOpen(!isMenuOpen)}
-                >
-                    <div className="icon"></div>
-                </div>
+                <MenuButton isMenuOpen={isMenuOpen} setMenuOpen={setMenuOpen} />
                 <ul
                     className={`menu_list 
-                      fixed top-0 left-0 w-full h-full bg-white bg-opacity-80 backdrop-blur-lg pt-40 md:flex md:relative md:bg-transparent md:w-auto md:h-auto md:backdrop-blur-none md:pt-0 md:transform-none md:transition-none md:ml-8
+                      fixed top-0 left-0 w-full h-full 
+                      bg-white dark:bg-black bg-opacity-80 backdrop-blur-lg pt-40 
+                      md:flex md:relative md:bg-transparent md:w-auto md:h-auto 
+                      md:backdrop-blur-none md:pt-0 md:transform-none md:transition-none md:ml-8
                       transition-transform duration-500 ${
                           isMenuOpen ? "translate-x-0" : "translate-x-full"
                       }`}
@@ -103,7 +104,9 @@ const Header: React.FC = () => {
                         <li key={index} className="m-8 md:mr-6">
                             <a
                                 href={arrHref[index]}
-                                className="text-default_color text-2xl md:text-xl md:text-lg font-semibold md:py-6 py-4 transition-colors duration-200 md:hover:text-main_color md:hover:dark:text-main_color_dark"
+                                className="text-default_color dark:text-default_color_dark text-2xl font-semibold 
+                                md:text-xl md:text-lg md:py-6 py-4 md:hover:text-main_color md:hover:dark:text-main_color_dark
+                                transition-colors duration-200"
                             >
                                 {menu}
                             </a>
