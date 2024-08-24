@@ -49,14 +49,33 @@ export default async function PostPage({ params }: PostProps) {
         notFound();
     }
 
+    function formatDate(date: string) {
+        return new Date(date).toLocaleDateString("kr-KR", {
+            year: "numeric",
+            month: "short",
+        });
+    }
+
     return (
         <article className="py-6 px-5 prose dark:prose-invert px-4">
             <h1 className="mb-2">{post.title}</h1>
+            <div className="flex py-4 md:flex-row flex-col md:gap-6 gap-2 justify-between md:items-center"> 
+
             {post.description && (
-                <p className="text-xl mt-0 text-slate-700 dark:text-slate-200">
+                <p className="m-0 text-xl text-slate-700 dark:text-slate-200">
                     {post.description}
                 </p>
             )}
+            <h4 className="m-0 opacity-50 shrink-0">
+                {formatDate(post.from)} ~ {formatDate(post.to)}
+            </h4>
+
+            </div>
+            <div className="flex gap-2 mb-2">
+                {post.tags && post.tags.map((el, i) => (
+                    <kbd key={i} className="bg-main_color text-white px-2">#{el}</kbd>
+                ))}
+            </div>
             <hr className="my-4" />
             <Mdx code={post.body.code} />
         </article>

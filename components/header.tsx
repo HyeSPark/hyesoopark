@@ -71,7 +71,7 @@ const Header: React.FC = () => {
 
     return (
         <header
-            className={`fixed md:sticky top-0 left-0 right-0 bg-white p-4 md:px-8 md:py-3 flex justify-between items-center transition duration-300 ${
+            className={`fixed md:sticky top-0 left-0 z-40 right-0 bg-white p-4 md:px-8 md:py-3 flex justify-between items-center transition duration-300 ${
                 isNavUp ? "-translate-y-full" : ""
             }`}
         >

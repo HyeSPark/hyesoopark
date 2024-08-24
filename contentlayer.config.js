@@ -60,8 +60,8 @@ export const Project = defineDocumentType(() => ({
         description: {
             type: "string",
         },
-        organization: {
-            type: "string",
+        tags: {
+            type: "list", of: { type: "string" },
         },
         from: {
             type: "date",
@@ -71,6 +71,10 @@ export const Project = defineDocumentType(() => ({
             type: "date",
             required: true,
         },
+        thumb: {
+            type: "string",
+            required: true,
+        }
     },
     computedFields,
 }));
