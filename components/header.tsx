@@ -75,7 +75,7 @@ const Header: React.FC = () => {
             className={`top-0 left-0 right-0 flex justify-between items-center transition duration-300 z-40
               md:sticky md:px-8 md:py-3 
               fixed p-4 
-              bg-white dark:bg-black
+              bg-white dark:bg-slate-950
               ${
                 isNavUp ? "-translate-y-full" : ""
             }`}
@@ -93,7 +93,7 @@ const Header: React.FC = () => {
                 <ul
                     className={`menu_list 
                       fixed top-0 left-0 w-full h-full 
-                      bg-white dark:bg-black bg-opacity-80 backdrop-blur-lg pt-40 
+                      bg-white dark:bg-slate-950 bg-opacity-80 backdrop-blur-lg pt-40 
                       md:flex md:relative md:bg-transparent md:w-auto md:h-auto 
                       md:backdrop-blur-none md:pt-0 md:transform-none md:transition-none md:ml-8
                       transition-transform duration-500 ${

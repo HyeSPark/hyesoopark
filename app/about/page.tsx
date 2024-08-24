@@ -28,8 +28,8 @@ export default async function AboutPage() {
         </div>
         <h2>Education</h2>
         <ul>
-            <li>Feb. 2023 - Feb. 2025: M.S. in 
-                <Link href="https://cs.kaist.ac.kr/" target="_blank">School of Computing, KAIST</Link> - Advised by 
+            <li>Feb. 2023 - Feb. 2025: M.S. in {" "}
+                <Link href="https://cs.kaist.ac.kr/" target="_blank">School of Computing, KAIST</Link> - Advised by {" "}
                 <Link href="https://scholar.google.co.kr/citations?user=Sc2pBzYAAAAJ&hl=ko" target="_blank">Uichin Lee</Link>
             </li>
             <li>Mar. 2018 - Aug. 2022: B.E. in Industrial & Systems Engineering, KAIST
