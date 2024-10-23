@@ -39,11 +39,11 @@ export default function Home() {
         <p>
           My research interests lie in Human-Computer Interaction, particularly
           in social computing and computer-supported cooperative work. In this
-          context, I focus on designing systems that empower people collaborate
-          to support <b>human well-being</b>, for those historically underserved
-          by digital solutions. Recently, I have explored how data-powered
-          systems can promote positive behavior change by encouraging
-          self-awareness, reflection and social support.
+          context, I focus on designing systems that empower people to
+          collaborate to support <b>human well-being</b>, for those historically
+          underserved by digital solutions. Recently, I have explored how
+          data-powered systems can promote positive behavior change by
+          encouraging self-awareness, reflection and social support.
         </p>
       </section>
     </>
