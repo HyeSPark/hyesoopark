@@ -84,7 +84,8 @@ export default function Home() {
                 <Video width={16} height={16} />
               )}
             {!pub.pdfLink && !pub.doiLink && !pub.vidLink && (
-              <span className="italic">(Under Review)</span>
+              // <span className="italic">(Under Review)</span>
+              <></>
             )}
           </div>
         </div>
