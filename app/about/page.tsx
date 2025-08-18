@@ -20,6 +20,13 @@ export default async function AboutPage() {
         >
           <Github /> <span>HyeSPark</span>
         </a>
+        <a
+          target="_blank"
+          className="flex rounded-full px-4 py-2 border gap-2 items-center"
+          href="https://scholar.google.com/citations?user=RI56iIAAAAAJ&hl=ko"
+        >
+          <GoogleScholar /> <span>Publications</span>
+        </a>
 
         <a
           target="_blank"
@@ -28,14 +35,6 @@ export default async function AboutPage() {
         >
           <Behance />
           <span>Design Projects</span>
-        </a>
-
-        <a
-          target="_blank"
-          className="flex rounded-full px-4 py-2 border gap-2 items-center"
-          href="https://scholar.google.com/citations?user=RI56iIAAAAAJ&hl=ko"
-        >
-          <GoogleScholar /> <span>Publications</span>
         </a>
       </div>
       <h2>Education</h2>
