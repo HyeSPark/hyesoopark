@@ -42,7 +42,7 @@ export default function Home() {
               <span
                 key={i}
                 className={`font-semibold ${
-                  auth === "Hye Soo Park"
+                  auth === "Hyesoo Park"
                     ? "text-main_color dark:text-main_color_dark"
                     : ""
                 }`}

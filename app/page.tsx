@@ -19,7 +19,7 @@ export default function Home() {
       <div className="md:flex items-center gap-8">
         <img className="p-4 m-0 w-96" src="/main_img.png" />
         <div className="text-3xl font-semibold my-10 leading-snug">
-          Hi! I’m Hye Soo Park. <br />I research how people collaborate for{" "}
+          Hi! I’m Hyesoo Park. <br />I research how people collaborate for{" "}
           <b>well-being</b>
           <br />
         </div>

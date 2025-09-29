@@ -42,7 +42,7 @@ const Footer: React.FC = () => {
         </ul>
         <div className="flex gap-2 items-center">
           <span className="text-gray-500 text-sm md:text-right">
-            © 2024. Hye Soo Park all rights reserved.
+            © 2025. Hyesoo Park all rights reserved.
           </span>
           <ModeToggle />
         </div>

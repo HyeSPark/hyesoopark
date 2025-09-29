@@ -10,7 +10,7 @@ export default async function AboutPage() {
         width={150}
         height={150}
         src="/profilepic.jpg"
-        alt="Profile picture of Hye Soo Park. Smiling"
+        alt="Profile picture of Hyesoo Park. Smiling"
       />
       <div className="flex flex-wrap gap-3 text-lg">
         <a

@@ -19,35 +19,33 @@ const wanted = localFont({
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-    title: "Hye Soo Park | INFO",
-    description: "Hi there! I'm Hye Soo, a HCI researcher.",
-    url: "https://hyesoopark.com",
-    ogImage: "/main_img.png"
+  title: "Hyesoo Park | INFO",
+  description: "Hi there! I'm Hyesoo, a HCI researcher.",
+  url: "https://hyesoopark.com",
+  ogImage: "/main_img.png",
 };
 
 interface RootLayoutProps {
-    children: React.ReactNode;
+  children: React.ReactNode;
 }
 
 export default function RootLayout({ children }: RootLayoutProps) {
-    return (
-        <html lang="en" className={`${wanted.variable}`}>
-            <body
-                className={`antialiased min-h-screen bg-white dark:bg-slate-950 text-slate-900 dark:text-slate-50 ${wanted.className}`}
-            >
-                <ThemeProvider
-                    attribute="class"
-                    defaultTheme="system"
-                    enableSystem
-                >
-                    <div className="flex flex-col min-h-screen">
-                        <Header />  
-                        <main className="md:max-w-4xl px-6 mx-auto flex-grow mt-24 md:mt-0">{children}</main>
-                        <Footer />
-                    </div>
-                    <Analytics />
-                </ThemeProvider>
-            </body>
-        </html>
-    );
+  return (
+    <html lang="en" className={`${wanted.variable}`}>
+      <body
+        className={`antialiased min-h-screen bg-white dark:bg-slate-950 text-slate-900 dark:text-slate-50 ${wanted.className}`}
+      >
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <div className="flex flex-col min-h-screen">
+            <Header />
+            <main className="md:max-w-4xl px-6 mx-auto flex-grow mt-24 md:mt-0">
+              {children}
+            </main>
+            <Footer />
+          </div>
+          <Analytics />
+        </ThemeProvider>
+      </body>
+    </html>
+  );
 }
