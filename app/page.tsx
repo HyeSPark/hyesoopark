@@ -18,9 +18,10 @@ export default function Home() {
     <>
       <div className="md:flex items-center gap-8">
         <img className="p-4 m-0 w-96" src="/main_img.png" />
-        <div className="text-3xl font-semibold my-10 leading-snug">
-          Hi! I’m Hyesoo Park. <br />I research how people collaborate for{" "}
-          <b>well-being</b>
+        <div className="text-4xl my-10 leading-snug">
+          Welcome!
+          <br />I am <span className="font-semibold">Hyesoo Park</span>, a Ph.D.
+          student in School of Interactive Computing at Georgia Tech.
           <br />
         </div>
       </div>
@@ -32,14 +33,8 @@ export default function Home() {
           collaborate to support <b>human well-being</b>, for those historically
           underserved by digital solutions. Recently, I have explored how
           data-powered systems can promote positive behavior change by
-          encouraging self-awareness, reflection and social support.
-        </p>
-        <p>
-          I’m currently a Ph.D student at{" "}
-          <a href="https://www.ic.gatech.edu/" target="_blank">
-            School of Interactive Computing
-          </a>{" "}
-          in Georgia Tech, with the advisement of{" "}
+          encouraging self-awareness, reflection and social support. I’m
+          currently advised by{" "}
           <a href="https://faculty.cc.gatech.edu/~jkim693/" target="_blank">
             Prof. Jennifer G. Kim.
           </a>

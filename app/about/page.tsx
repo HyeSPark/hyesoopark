@@ -36,6 +36,7 @@ export default async function AboutPage() {
           <Behance />
           <span>Design Projects</span>
         </a>
+        <div>Currently working at CODA Building, E1552B</div>
       </div>
       <h2>Education</h2>
       <ul>
