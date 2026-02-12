@@ -17,11 +17,10 @@ export default function Home() {
   const posts = allPosts.sort((a, b) => (a.date > b.date ? -1 : 1));
   const visibleNewsPosts = posts.slice(0, MAX_NEWS_NUM);
   const invisibleNewsPosts = posts.slice(MAX_NEWS_NUM, posts.length);
-  console.log(allPosts.length);
 
   const renderIntro = () => (
     <>
-      <section>
+      <section className="pb-6">
         <div className="md:flex items-center gap-8">
           <img className="p-4 m-0 w-96" src="/main_img.png" />
           <div className="text-4xl my-8 leading-snug">
@@ -58,8 +57,8 @@ export default function Home() {
         </ul>
 
         <p>
-          Recently, I&apos;m exploring 1) LLM&apos;s opportunities and
-          challenges of <b>job seeking support for autistic individuals</b>, 2){" "}
+          Lately, I&apos;m exploring 1) LLM&apos;s opportunities and challenges
+          of <b>job seeking support for autistic individuals</b>, 2){" "}
           <b>online body doubling community</b> as a care practice for
           productivity, and 3) working structure and tacit knowledge of{" "}
           <b>activists responding to tech-facilitated sexual violence</b>.
@@ -103,20 +102,5 @@ export default function Home() {
         </div>
       </details>
     </div>
-    //     {/* </Link> */}
-    //     <section>
-    //       <details className="group rounded-lg border p-4">
-    //         <summary className="cursor-pointer list-none font-medium">
-    //           클릭해서 펼치기
-    //         </summary>
-
-    //         <div className="mt-3">
-    //           여기에 펼쳐질 내용(리스트/이미지/본문 등)을 넣으시면 됩니다.
-    //         </div>
-    //       </details>
-    //     </section>
-    //   </article>
-    // ))}
-    // </div>
   );
 }
