@@ -86,6 +86,7 @@ export default async function AboutPage() {
           React.js, Next.js — Developing web app using components and hooks
         </li>
         <li>p5.js — Creating graphics and interactive web</li>
+        <li>LLM applications using chatGPT API</li>
       </ul>
 
       <h4>Data Analysis</h4>
