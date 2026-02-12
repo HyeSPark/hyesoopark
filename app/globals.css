@@ -43,6 +43,7 @@ html {
   display: inline;
 }
 
+/*
 body {
   min-height: 100vh;
   margin: 0;
@@ -63,7 +64,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-overflow-scrolling: touch;
 }
-*/ .btn2 {
+*/
+.btn2 {
   width: 24px;
   height: 24px;
   top: 16px;
